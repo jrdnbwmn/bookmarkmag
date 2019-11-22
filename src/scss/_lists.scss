@@ -14,4 +14,10 @@
         display: inline-block;
         font-size: 1rem; // Part of getting rid of the inline-block ghost space
     }
+
+    @media screen and (max-width: $breakpoint--ty) {
+        li {
+            display: block;
+        }
+    }
 }

@@ -1,31 +1,13 @@
-# Pear
+# Viking
+Say hello to Viking, a classic, full-height site template.
 
-A boilerplate for static site projects. Personally, I often use this for quick HTML prototyping.
+[eatapapaya.com](https://www.eatapapaya.com)
+[@jrdnbwmn](https://www.twitter.com/jrdnbwmn)
 
-See it at http://eatapear.com.
+Demo images from [Unsplash](https://unsplash.com/).
+Icons from [Entypo](http://entypo.com/).
 
-Pear is focused on:
+## Instructions
+For local development, run `npm install` on the main directory and then `gulp` to get BrowserSync going along with all the Gulp tasks (see [Pear](https://github.com/jrdnbwmn/Pear)).
 
-- 100% responsive design
-- Performance
-- Maintainability
-- Architecture/workflow
-
-## What's Included
-
-- HTML boilerplate with a simple pattern library (demonstrated on the website).
-- Base Sass styles
-- Icon font family
-- Advanced Gulp setup for a local server, CSS compliation & minification, etc
-
-## Getting Started
-There's a few options:
-
-- Download directly from the [GitHub repo](https://github.com/jrdnbwmn/pear).
-- Clone the repo: `git clone https://github.com/jrdnbwmn/pear.git`.
-- Install with [Bower](http://bower.io/): `bower install pear`.
-
-Run `npm install` and then `gulp` to get BrowserSync going along with all the Gulp tasks.
-
-## License
-Released under the [MIT License](http://opensource.org/licenses/MIT).
+You can then work on the files in `src` and everything will be compiled into `dist`.
