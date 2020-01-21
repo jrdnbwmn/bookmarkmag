@@ -3,7 +3,7 @@
 
 # TEAM 
 
-    Creator: <name>
+    Creator: Jordan Bowman
     <website>
     <twitter>
     <contact>
