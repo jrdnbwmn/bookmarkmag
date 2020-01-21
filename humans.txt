@@ -8,10 +8,6 @@
     @jrdnbwmn
     desk@jrdnbwmn.com
 
-# THANKS
-
-    <name>
-
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3, Javascript
