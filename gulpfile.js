@@ -1,6 +1,6 @@
 // Get things set up
 // -------------------------------------------------------------------
-// Include Gulp
+    // Include Gulp
 var gulp                    = require("gulp"),
 
     // HTML plugins
@@ -9,11 +9,9 @@ var gulp                    = require("gulp"),
 
     // CSS plugins
     sass                    = require("gulp-sass"),
-    combineMediaQueries     = require("gulp-combine-mq"),
     autoprefixer            = require("gulp-autoprefixer"),
     cssmin                  = require("gulp-clean-css"),
     rename                  = require("gulp-rename"),
-    globber                 = require('glob'),
 
     // JS plugins
     concat                  = require("gulp-concat"),
@@ -33,8 +31,8 @@ var gulp                    = require("gulp"),
 // Tasks
 // -------------------------------------------------------------------
 // Start server
-gulp.task("browser-sync", function() {
-    browserSync({
+gulp.task('browser-sync', function() {
+    browserSync.init({
         server: {
             baseDir: "dist"
         }
@@ -73,6 +71,12 @@ gulp.task("html", function() {
         .pipe(gulp.dest("dist"));
 });
 
+// create a task that ensures the `js` task is complete before reloading
+gulp.task('html-watch', ['html'], function (done) {
+    browserSync.reload();
+    done();
+});
+
 // CSS task
 gulp.task("css", function() {
     return gulp.src("src/scss/main.scss")
@@ -80,8 +84,6 @@ gulp.task("css", function() {
         .pipe(plumber(onError))
         // Compile Sass
         .pipe(sass({ style: "compressed", noCache: true }))
-        // Combine media queries
-        .pipe(combineMediaQueries())
         // parse CSS and add vendor-prefixed CSS properties
         .pipe(autoprefixer({
             browsers: ["last 2 versions"]
@@ -94,6 +96,12 @@ gulp.task("css", function() {
         .pipe(size({ showFiles: true }))
         // Where to store the finalized CSS
         .pipe(gulp.dest("dist/css"));
+});
+
+// create a task that ensures the `js` task is complete before reloading
+gulp.task('css-watch', ['css'], function (done) {
+    browserSync.reload();
+    done();
 });
 
 // JS task
@@ -109,6 +117,12 @@ gulp.task("js", function() {
         .pipe(gulp.dest("dist/js"));
 });
 
+// create a task that ensures the `js` task is complete before reloading
+gulp.task('js-watch', ['js'], function (done) {
+    browserSync.reload();
+    done();
+});
+
 // Image task
 gulp.task("images", function() {
     return gulp.src("src/img/**/*.+(png|jpeg|jpg|gif|svg)")
@@ -120,23 +134,26 @@ gulp.task("images", function() {
         .pipe(gulp.dest("dist/img"));
 });
 
-// Use default task to launch BrowserSync and watch all files
-gulp.task("default", ["browser-sync"], function () {
-    // All browsers reload after tasks are complete
-    // Watch HTML files
-    watch("src/html/**/*", function () {
-        gulp.start("html", reload);
+// create a task that ensures the `js` task is complete before reloading
+gulp.task('images-watch', ['images'], function (done) {
+    browserSync.reload();
+    done();
+});
+
+// use default task to launch Browsersync and watch JS files
+gulp.task('default', ['js'], function () {
+
+    // Serve files from the root of this project
+    browserSync.init({
+        server: {
+            baseDir: "dist"
+        }
     });
-    // Watch Sass files
-    watch("src/scss/**/*", function () {
-        gulp.start('css', reload);
-    });
-    // Watch JS files
-    watch("src/js/**/*", function () {
-        gulp.start("js", reload);
-    });
-    // Watch image files
-    watch("src/img/**/*.+(png|jpeg|jpg|gif|svg)", function () {
-        gulp.start("images", reload);
-    });
+
+    // add browserSync.reload to the tasks array to make
+    // all browsers reload after tasks are complete.
+    gulp.watch("src/html/**/*", ['html-watch']);
+    gulp.watch("src/scss/**/*", ['css-watch']);
+    gulp.watch("src/js/**/*", ['js-watch']);
+    gulp.watch("src/img/**/*.+(png|jpeg|jpg|gif|svg)", ['images-watch']);
 });

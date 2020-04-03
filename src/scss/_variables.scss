@@ -15,11 +15,12 @@ $white:                   #fff !default;
 $red:                     #c03b2b !default;
 $tan:                     #f5f4f0 !default;
 $blue:                    #428bca !default;
+$yellow:                  #f1d643 !default;
 
 // Color scheme
-$primary-color:           $red !default;
+$primary-color:           $yellow !default;
 $secondary-color:         $tan !default;
-$tertiary-color:          $blue !default;
+$tertiary-color:          $red !default;
 
 
 // Baseline
@@ -30,12 +31,12 @@ $baseline:                .4rem !default;
 // Typography
 // -------------------------------------------------------------------
 // Font families
-$sans-serif:              Cabin, Avenir, "Avenir Next", Trebuchet,
+$sans-serif:              Montserrat, Avenir, "Avenir Next", Trebuchet,
                           Verdana, sans-serif !default;
-$serif:                   "Playfair Display", Times, serif !default;
+$serif:                   Lora, Times, serif !default;
 
-$font-family--base:       $sans-serif !default;
-$font-family--heading:    $serif !default;
+$font-family--base:       $serif !default;
+$font-family--heading:    $sans-serif !default;
 $font-family--reading:    $serif !default;
 $font-family--ui:         $sans-serif !default;
 
@@ -68,7 +69,7 @@ $font-size--sm:           $h5 !default;
 
 // Weights
 $font-weight--base:       400 !default;
-$font-weight--heading:    700 !default;
+$font-weight--heading:    800 !default;
 
 // Line heights
 $line-height--base:       $baseline*4 !default;
