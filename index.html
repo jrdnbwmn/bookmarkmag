@@ -9,103 +9,266 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
         <title>Bookmark</title>
-        <meta name="description" content="Monthly reading guides for kids 5-12 to cultivate a love of books and reading.">
+        <meta name="description" content="Bookmark makes reading materials.">
 
         <!-- The compiled CSS file -->
         <link rel="stylesheet" href="css/production.css">
 
         <!-- Web fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-        <!-- favicon.ico. Place these in the root directory. -->
+        <!-- favicon.ico and apple-touch-icon. A good tool is http://iconogen.com/. Place these in the root directory. -->
         <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon" href="icon.png">
 
     </head>
 
     <body>
 
 
-    <div class="grid-row">
+<header>
 
-                <!-- Header -->
-        <header class="header bg--primary-color">
+    <div class="pl2 pr2">
+    
+        <!-- Desktop nav try all caps and smaller -->
+        <nav class="desktop-nav no-bullets flex align-items-center justify-content-center">
+            <li class="ml3 mr3"><a href="/about.html" class="uppercase link link--text pl1 pr1">About</a></li>
+            <li class="ml3 mr3"><a href="https://gumroad.com/bookmarkguides" class="uppercase link link--text pl1 pr1">Reading&nbsp;Clubs</a></li>
+            <li class="ml3 mr3"><a href="/" class="link pl1 pr1"><h1><img class="logo" src="/img/bookmark-logo.svg" alt="Bookmark"></h1></a></li>
+            <li class="ml3 mr3"><a href="https://gumroad.com/bookmarkguides#OCRxq" class="uppercase link link--text pl1 pr1">Free&nbsp;Resources</a></li>
+            <li class="ml3 mr3"><a href="/contact.html" class="uppercase link link--text pl1 pr1">Contact</a></li>
+        </nav>
 
-            <!-- Mobile header -->
-            <div class="show-on-mobile pt1 pl2 pr2 mb1 full-width">
-                <div class="pt1 pb1">
-                    <div class="align--center">
-                        <div>
-                            <div class="mb1"><img class="logo--mobile" src="/img/mobile-logo.svg" alt="Bookmark" title="Bookmark"></div>
+        <!-- Mobile nav -->
+        <nav class="mobile-nav js-mobile-nav border--bottom pt1">
+            <div class="clearfix pb1">
+                <a href="/" class="link float--left"><img class="block" src="/img/bookmark-logo-tall.svg" style="max-height:28px;padding-top:.4rem" alt="Catylist"></a>
+                <div class="float--right" style="padding:.6rem 0 .6rem .4rem">
+                    <div class="mobile-nav-toggle mobile-nav-toggle--white js-mobile-nav-toggle">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                </div>
+            </div>
+            <ul class="no-bullets mobile-nav-menu bold border--top js-mobile-nav-menu">
+                <li><a class="link link--text block pt1 pb1 border--bottom" href="/about.html">About</a></li>
+                <li><a class="link link--text block pt1 pb1 border--bottom" href="https://gumroad.com/bookmarkguides">Reading Clubs</a></li>
+                <li><a class="link link--text block pt1 pb1 border--bottom" href="https://gumroad.com/bookmarkguides#OCRxq">Free Resources</a></li>
+                <li><a class="link link--text block pt1 pb1" href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<main>
+
+    <!-- Hero all caps buttons and headerlinks -->
+    <section class="hero pt5 pb5">
+        <div class="container--lg pt4 pb4 bg--shade-on-mobile pl2-on-mobile pr2-on-mobile">
+            <div class="grid-row">
+                <div class="grid-column span-5">
+                    <h2 class="mb1">Reading joy made easy</h2>
+                    <p class="mb2">Our monthly reading club makes reading more joyful and less stressful for both kids and parents.</p>
+                    <a href="https://gumroad.com/bookmarkguides" class="btn btn--outline">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="bg--shade pt4 pb4">
+        <div class="align--center">
+            <h2 class="mb1">You want your child to love&nbsp;reading.</h2>
+            <h2 class="text--green">We can help with that.</h2>
+        </div>
+    </section>
+
+    <!-- Pillars -->
+    <section class="pt5 pb4">
+        <div class="container--lg">
+            <div>
+                <div class="grid-row">
+                    <div class="grid-column pl2 pr2 pb2">
+                        <img class="mb2" src="/img/1.png" alt="" style="max-width:100px">
+                        <h3 class="mb1">Great Books</h3>
+                        <p>In order to enjoy reading, kids need to read the right books—the best books for them. We help them find those books and help them learn to curate their own books.</p>
+                    </div>
+                    <div class="grid-column pl2 pr2 pb2">
+                        <img class="mb2" src="/img/2.png" alt="" style="max-width:100px">
+                        <h3 class="mb1">Skills & Tools</h3>
+                        <p>Kids should feel empowered in their reading life. Our guides provide them with opportunities & tools to develop the skills they need to do so.</p>
+                    </div>
+                    <div class="grid-column pl2 pr2 pb2">
+                        <img class="mb2" src="/img/3.png" alt="" style="max-width:100px">
+                        <h3 class="mb1">Sharing</h3>
+                        <p>Sharing what you're reading with others takes the reading experience to the next level. We help kids and families grow together as they read together.</p>
+                    </div>
+                    <div class="grid-column pl2 pr2 pb2">
+                        <img class="mb2" src="/img/4.png" alt="" style="max-width:100px">
+                        <h3 class="mb1">Child Led</h3>
+                        <p>Our guides are made to be used by kids. That means more learning, growth, and confidence for them, and less work, less stress, and more simplicity for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="bg--shade pt5 pb5">
+        <div class="container--lg">
+            <h2 class="align--center mb4">How Bookmark's Reading Clubs work</h2>
+            <div>
+                <div class="grid-row grid-row--center">
+                    <div class="grid-column">
+                        <div class="flex" style="flex:0 1 auto;flex-direction:row;flex-wrap:wrap">
+                            <div class="font--heading bold h3 text--green" style="flex-basis:41px;max-width:41px;flex:1 0 0%">1.</div>
+                            <div style="flex:1 0 0%">
+                                <p class="mb2"><span class="bold">Pick an Age Group.</span> We have clubs for pre-k through 6th grade, with middle school and high school coming soon!</p>
+                            </div>
                         </div>
-                        <div>
-                            <!-- Mobile social links -->
-                            <ul class="no-bullets list--inline">
-                                <li class="mr2"><a class="link link--default" href="https://www.facebook.com/bookmarkguides"><img class="icon" src="/img/facebook.svg" alt="Facebook"></a></li>
-                                <li><a class="link link--default" href="https://www.instagram.com/bookmarkguides/"><img class="icon" src="/img/instagram.svg" alt="Instagram"></a></li>
-                            </ul>
+                        <div class="flex" style="flex:0 1 auto;flex-direction:row;flex-wrap:wrap">
+                            <div class="font--heading bold h3 text--red" style="flex-basis:41px;max-width:41px;flex:1 0 0%">2.</div>
+                            <div style="flex:1 0 0%">
+                                <p class="mb2"><span class="bold">Delivered to Your Inbox Monthly.</span> Each subscription is delivered straight to your inbox monthly. You’ll have access to all of the materials forever!</p>
+                            </div>
+                        </div>
+                        <div class="flex" style="flex:0 1 auto;flex-direction:row;flex-wrap:wrap">
+                            <div class="font--heading bold h3 text--blue" style="flex-basis:41px;max-width:41px;flex:1 0 0%">3.</div>
+                            <div style="flex:1 0 0%">
+                                <p><span class="bold">Let the Reading Love Begin!</span> Our clubs help each age group find more joy in reading & develop lifelong habits that help them grow into strong readers.</p>
+                            </div>
+                        </div>
+                        <div class="options-container m0-on-mobile mt3">
+                            <a href="https://gumroad.com/bookmarkguides" class="btn btn--block btn--outline mt2-on-mobile mb2-on-mobile">See the Options</a>
+                        </div>
+                    </div>
+                    <div class="grid-column span-1"></div>
+                    <div class="grid-column">
+                        <div class="border--full p1" style="border-color:#fff;border-width:3px">
+                            <img src="/img/howitworks.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Desktop header -->
-            <!-- Desktop logo -->
-            <h1 class="hide-on-mobile logo-container absolute block full-width align--center"><img class="logo--desktop" src="/img/desktop-logo.svg" alt="Bookmark" title="Bookmark"></h1>
-            <!-- Social links -->
-            <ul class="pt1 no-bullets align--center hide-on-mobile">
-                <li><a class="link link--default" href="https://www.facebook.com/bookmarkguides"><img class="icon" src="/img/facebook.svg" alt="Facebook"></a></li>
-                <li><a class="link link--default" href="https://www.instagram.com/bookmarkguides/"><img class="icon" src="/img/instagram.svg" alt="Instagram"></a></li>
-            </ul>
-
-        </header>
-
-        <!-- Hero image -->
-        <div class="hero-container full-width show-on-mobile pt1 pl2 pr2">
-            <div class="hero full-width full-height" style="background:rgba(0,0,0,0) url(/img/girl.jpg) no-repeat scroll center center/cover"></div>
+            
         </div>
-        <div class="hide-on-mobile hero" style="background:rgba(0,0,0,0) url(/img/girl.jpg) no-repeat scroll center center/cover"></div>
+    </section>
 
-        <!-- Body -->
-        <div class="body full-width pt1 pr2 pb2 pl2">
-            <!-- Page Content -->
-            <main class="content pt1 pb2">
-                <h1 class="mt1 mb2 text--primary-color" style="font-size:2rem">COMING SOON!</h1>
-                <p>Bookmark is coming soon! Join our newsletter to be the first to know about our reading guides for kids ages 5-12. Our goal is to get your children excited about reading and give them the tools to read well. Sign up to receive:</p>
-                <ul class="list--indented mb2">
-                    <li>Harry Potter School Guide for books 4 – 7.</li>
-                    <li>Reading tips, book reviews, and other bookish freebies.</li>
-                </ul>
-
-                <!-- Begin Mailchimp Signup Form -->
-                <div id="mc_embed_signup">
-                    <form action="https://gmail.us3.list-manage.com/subscribe/post?u=ebf7658a2b69e83a6808c5cd3&amp;id=ba232832b5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                            <div class="mc-field-group mb1">
-                                <input type="email" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email address">
-                            </div>
-                            <div id="mce-responses" class="clear">
-                                <div class="response" id="mce-error-response" style="display:none"></div>
-                                <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position:absolute;left:-5000px" aria-hidden="true">
-                                <input name="b_ebf7658a2b69e83a6808c5cd3_ba232832b5" tabindex="-1">
-                            </div>
-                            <div>
-                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn--outline block full-width">
-                            </div>
-                        </div>
-                    </form>
+    <!-- Testimonials -->
+    <section class="pt5 pb4">
+        <div class="container--lg">
+            <h2 class="mb4 align--center">What others are saying</h2>
+            <div class="grid-row">
+                <div class="grid-column pl2 pr2 pb2">
+                    <div>
+                        <p class="mb1">You freaking rocked it! I can’t wait to do the activities with my kids as we re-read the books! The art is SO beautiful, SO many different interactive activities! My printer can’t print fast enough!</p>
+                        <p class="bold">– Charnae R.</p>
+                    </div>
                 </div>
-                <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                <!--End mc_embed_signup-->
-            </main>
-                        <!-- Footer -->
-            <footer class="border--top pt1 pb1">
-                <p class="text--gray small mb0">&copy; Copyright Bookmark</p>
-            </footer>
-        </div><!-- end Body -->
+                <div class="grid-column pl2 pr2 pb2">
+                    <div>
+                        <p class="mb1">Thanks for making my life a million times easier! My children are book obsessed and I am not (but over the moon that they are), it’s hard for me to choose books for them. Thank&nbsp;you!</p>
+                        <p class="bold">– Hannah R.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Newsletter -->
+    <section class="bg--shade">
+        <div class="grid-row">
+            <div class="grid-column">
+                <div class="newsletter-signup-image full-height"></div>
+            </div>
+            <div class="grid-column pt4 pb4">
+                <div class="pt5 pb5 pt3-on-mobile pb3-on-mobile pl2-on-mobile pr2-on-mobile">
+                    <div class="grid-row">
+                        <div class="grid-column span-2"></div>
+                        <div class="grid-column">
+                            <h2 class="mb1">Join our newsletter!</h2>
+                            <p class="mb2">Sign up for discounts, free resources, reading tips, and&nbsp;more.</p>
+                            
+                            <!-- Begin Mailchimp Signup Form -->
+                            <div id="mc_embed_signup">
+                                <form action="https://bookmarkguides.us3.list-manage.com/subscribe/post?u=ebf7658a2b69e83a6808c5cd3&amp;id=ba232832b5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                    <div id="mc_embed_signup_scroll" class="no-flex-on-mobile">
+                                        <div class="mc-field-group flex mr1 input-block-on-mobile flex-grow-1 mb2-on-mobile">
+                                            <input type="email" name="EMAIL" class="required email form-control flex" id="mce-EMAIL" placeholder="Email address">
+                                        </div>
+                                        <div class="flex input-block-on-mobile">
+                                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn--outline">
+                                        </div>
+                                    </div>
+                                    <div class="mt1">
+                                        <div id="mce-responses" class="clear">
+                                            <div class="response" id="mce-error-response" style="display:none"></div>
+                                            <div class="response" id="mce-success-response" style="display:none"></div>
+                                        </div>
+                                        <div style="position:absolute;left:-5000px" aria-hidden="true"><input name="b_ebf7658a2b69e83a6808c5cd3_ba232832b5" tabindex="-1"></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                            <!-- End Mailchimp Signup Form -->
+                        </div>
+                        <div class="grid-column span-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram gray link -->
+    <section class="pt4 pb4 p0-on-mobile pt3-on-mobile pb3-on-mobile">
+        <div class="container--lg">
+            <div class="grid-row grid-row--center">
+                <div class="grid-column span-3 pb2-on-mobile">
+                    <p class="h2 font--heading bold mb1">Follow us on Instagram!</p>
+                    <p><a href="https://www.instagram.com/bookmarkguides/" class="link link--text">@BOOKMARKGUIDES</a></p>
+                </div>
+                <div class="grid-column" style="margin-bottom:-20px">
+                    <!-- SnapWidget -->
+                    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+                    <iframe src="https://snapwidget.com/embed/854265" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:100%"></iframe>
+                    <!-- End SnapWidget -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg--green text--white">
+    <div class="container--lg pt3 pb3">
+        <div class="clearfix">
+            <p class="float--left">&copy; Copyright 2020 Bookmark Guides</p>
+            <div class="float--right">
+                <ul class="no-bullets list--inline">
+                    <li class="mr1"><a href="https://www.facebook.com/bookmarkguides" class="link"><img class="social-icons" src="/img/facebook.svg" alt="Bookmark Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/bookmarkguides/" class="link"><img class="social-icons" src="/img/instagram.svg" alt="Bookmark Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
     </div>
+</footer>
+
+        <!-- Reference latest jQuery, with a local fallback -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+        <!-- The compiled Javascript file -->
+        <script src="/js/production.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+          window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+          ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async></script>
 
     </body>
 </html>

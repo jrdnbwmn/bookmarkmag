@@ -66,9 +66,23 @@
 
 <div class="container pt3 pb3">
 
-    <section>
-        <h1>404</h1>
-        <p>There was an error. Go back to the <a href="/" class="link">homepage</a>.</p>
+    <section class="pb4">
+        <div class="mb3">
+            <h1 class="mb1">Contact</h1>
+            <p>How can I help? Fill out the form below and I'll get back to you as soon as possible.</p>
+        </div>
+
+        <form action="https://getform.io/f/cf6b048d-fd93-4888-9af9-e4f9112ee343" method="POST">
+            <label for="name">Name</label>
+            <input class="form-control mb1" name="name" id="name" placeholder="Jane Doe">
+            <label for="email">Email</label>
+            <input class="form-control mb1" type="email" name="email" id="email" placeholder="jane.doe@example.com">
+            <label for="message">Message</label>
+            <textarea class="form-control mb2" name="message" id="message" placeholder="Explain your question or"></textarea>
+            <div class="align--right">
+                <button class="btn btn--default" type="submit"><i class="i i-paper-plane"></i> &nbsp;Send</button>
+            </div>
+        </form>
     </section>
 
 </div> <!-- End container -->
@@ -102,4 +116,3 @@
 
     </body>
 </html>
-
